@@ -1845,13 +1845,13 @@ header {
 
     /* Make each link stack nicely */
     .nav-links li {
-        margin-bottom: 1rem !important;
+       margin-bottom: 0 !important;  /* remove extra margins */
     }
 
     /* Optional: shrink font slightly on mobile */
     .nav-links li a {
+        padding: 0.4rem 0 !important;  /* reduce padding inside links */
         font-size: 1rem !important;
-        line-height: 1.5 !important;
     }
 }
 
@@ -1916,6 +1916,7 @@ header {
     height: 100% !important;
     border: 0 !important;
 }
+
 
 
 

@@ -1826,8 +1826,8 @@ header {
     .nav-links {
         display: none !important;
         flex-direction: column !important;
-        width: 90% !important; /* slightly smaller than full width */
-        max-height: 90vh !important; /* make it almost full screen height */
+        width: 40% !important; /* slightly smaller than full width */
+        max-height: 40vh !important; /* make it almost full screen height */
         overflow-y: auto !important; /* scroll if too many links */
         background-color: var(--dark-color) !important;
         position: fixed !important; /* fixed so it stays on top */
@@ -1916,6 +1916,7 @@ header {
     height: 100% !important;
     border: 0 !important;
 }
+
 
 
 

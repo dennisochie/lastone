@@ -1822,21 +1822,38 @@ header {
         z-index: 10001 !important;
     }
 
+    /* Mobile nav links container */
     .nav-links {
         display: none !important;
         flex-direction: column !important;
-        width: 100% !important;
+        width: 90% !important; /* slightly smaller than full width */
+        max-height: 90vh !important; /* make it almost full screen height */
+        overflow-y: auto !important; /* scroll if too many links */
         background-color: var(--dark-color) !important;
-        position: absolute !important;
-        top: 60px !important; /* adjust if header height is different */
-        left: 0 !important;
+        position: fixed !important; /* fixed so it stays on top */
+        top: 0 !important;
+        right: 0 !important; /* align from right */
         padding: 1rem !important;
+        border-radius: 0 0 0 10px !important; /* optional: rounded left side */
         box-sizing: border-box !important;
+        z-index: 10000 !important;
     }
 
     .nav-links.active {
         display: flex !important;
     }
+
+    /* Make each link stack nicely */
+    .nav-links li {
+        margin-bottom: 1rem !important;
+    }
+
+    /* Optional: shrink font slightly on mobile */
+    .nav-links li a {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+    }
+}
 
     /* ---------------- Parent Containers ---------------- */
     .container,
@@ -1899,6 +1916,7 @@ header {
     height: 100% !important;
     border: 0 !important;
 }
+
 
 
 

@@ -1831,7 +1831,7 @@ header {
         overflow-y: auto !important; /* scroll if too many links */
         background-color: var(--dark-color) !important;
         position: fixed !important; /* fixed so it stays on top */
-        top: 60 !important;
+        top: 0 !important;
         right: 0 !important; /* align from right */
         padding: 1rem !important;
         border-radius: 0 0 0 10px !important; /* optional: rounded left side */
@@ -1965,3 +1965,4 @@ header {
         font-size: 1rem !important;
     }
 }
+

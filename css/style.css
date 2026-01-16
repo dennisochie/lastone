@@ -1857,10 +1857,17 @@ header {
         box-sizing: border-box !important;
     }
 
-    .secure-form-group input,
-    .secure-form-group textarea {
+    /* ---------------- Form Inputs Fix ---------------- */
+    .secure-contact-form input,
+    .secure-contact-form textarea {
+        width: 100% !important;
+        max-width: 100% !important;  
+        box-sizing: border-box !important;
+        padding: 0.6rem !important;  /* optional for smaller screens */
         font-size: 0.95rem !important;
     }
+}
+
 
     .secure-submit-btn {
         padding: 0.8rem !important;
@@ -1892,5 +1899,6 @@ header {
     height: 100% !important;
     border: 0 !important;
 }
+
 
 

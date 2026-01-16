@@ -43,6 +43,17 @@ main {
     margin: 120px auto 40px;
     padding: 0 20px;
 }
+    /* ---------------- Track Page - Responsive ---------------- */
+@media (max-width: 768px) {
+    main {
+        width: 95% !important;         /* almost full width on small screens */
+        max-width: 100% !important;    /* remove desktop max-width */
+        margin: 60px auto 20px !important;  /* top margin = header height, less bottom */
+        padding: 80px 1rem 1rem !important; /* reduce padding for small screens */
+        box-sizing: border-box !important;
+    }
+}
+
 
 h1 {
     text-align: center;
@@ -392,3 +403,4 @@ window.addEventListener('DOMContentLoaded', () => {
 
 </body>
 </html>
+

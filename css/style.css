@@ -1827,8 +1827,7 @@ header {
         display: none !important;
         flex-direction: column !important;
         width: 40% !important; /* slightly smaller than full width */
-        max-height: 12rem !important; /* make it almost full screen height */
-        
+        max-height: 5rem !important; /* make it almost full screen height */
         overflow-y: auto !important; /* scroll if too many links */
         background-color: var(--dark-color) !important;
         position: fixed !important; /* fixed so it stays on top */
@@ -1966,6 +1965,7 @@ header {
         font-size: 1rem !important;
     }
 }
+
 
 
 

@@ -1771,7 +1771,7 @@ header {
     .nav-links {
         display: none;
         position: absolute;
-        top: 60px;               /* below header */
+        top: 0px;               /* below header */
         right: 10px;             /* some margin from the right */
         width: 220px;            /* fixed width for card */
         flex-direction: column;
@@ -1855,6 +1855,9 @@ header {
     }
 }
 
+ /* ================= MOBILE FIXES FOR CONTACT PAGE ================== */
+@media (max-width: 768px) {
+
     /* ---------------- Parent Containers ---------------- */
     .container,
     .contact-container,
@@ -1871,20 +1874,28 @@ header {
         width: 100% !important;
         padding: 1rem !important;
         gap: 0.8rem !important;
+        display: flex !important;
+        flex-direction: column !important;
         box-sizing: border-box !important;
     }
 
-    /* ---------------- Form Inputs Fix ---------------- */
-    .secure-contact-form input,
-    .secure-contact-form textarea {
-        width: 100% !important;
-        max-width: 100% !important;  
-        box-sizing: border-box !important;
-        padding: 0.6rem !important;  /* optional for smaller screens */
+    .secure-form-group {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .secure-form-group label {
         font-size: 0.95rem !important;
     }
-}
 
+    .secure-form-group input,
+    .secure-form-group textarea {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0.6rem !important;
+        font-size: 0.95rem !important;
+        box-sizing: border-box !important;
+    }
 
     .secure-submit-btn {
         padding: 0.8rem !important;
@@ -1897,31 +1908,60 @@ header {
         gap: 0.5rem !important;
         align-items: flex-start !important;
     }
-/* ---------------- Map Responsiveness (Bigger on Mobile) ---------------- */
-.map-responsive {
-    position: relative !important;
-    padding-bottom: 75% !important; /* taller, takes more vertical space */
-    width: 100% !important;          /* full width */
-    height: auto !important;         /* let height adjust */
-    overflow: hidden !important;
-    border-radius: 10px !important;
-    margin-top: 1rem !important;
+
+    /* ---------------- Map Responsiveness ---------------- */
+    .map-responsive {
+        position: relative !important;
+        padding-bottom: 75% !important; /* taller, more vertical space */
+        width: 100% !important;
+        height: auto !important;
+        overflow: hidden !important;
+        border-radius: 10px !important;
+        margin-top: 1rem !important;
+    }
+
+    .map-responsive iframe {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        border: 0 !important;
+    }
+
+    /* ---------------- Hamburger Toggle & Mobile Menu ---------------- */
+    .hamburger {
+        display: block !important;
+        cursor: pointer !important;
+        z-index: 10001 !important;
+    }
+
+    .nav-links {
+        display: none !important;
+        flex-direction: column !important;
+        width: 50% !important;          /* Adjusted width */
+        max-height: 80vh !important;    /* Use most of screen height */
+        overflow-y: auto !important;
+        background-color: var(--dark-color) !important;
+        position: fixed !important;
+        top: 60px !important;            /* space from top header */
+        right: 0 !important;
+        padding: 1rem !important;
+        border-radius: 0 0 0 10px !important;
+        box-sizing: border-box !important;
+        z-index: 10000 !important;
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    .nav-links li {
+        margin-bottom: 0 !important;     /* remove default margin */
+    }
+
+    .nav-links li a {
+        padding: 0.4rem 0 !important;     /* reduce vertical space between links */
+        font-size: 1rem !important;
+    }
 }
-
-.map-responsive iframe {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    border: 0 !important;
-}
-
-
-
-
-
-
-
-
-

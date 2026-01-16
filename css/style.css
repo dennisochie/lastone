@@ -20,7 +20,7 @@ body {
     background: var(--dark-color); /* body background same as footer/header */
     color: var(--white);           /* default text color */
     font-family: Arial, sans-serif;
-    
+     padding-top: 70px;
 }
 
 main {
@@ -1969,6 +1969,7 @@ header {
         font-size: 1rem !important;
     }
 }
+
 
 
 
